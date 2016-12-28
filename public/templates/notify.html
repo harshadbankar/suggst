@@ -1,0 +1,58 @@
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Push
+        Notification</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Credits</label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <div ng-show="pushNotificationSupported">
+                    <div class="group">
+                        <label for="user" class="label">Message: </label>
+                        <input id="user" type="text" ng-model="messageToSend" class="input" required>
+                    </div>
+
+                    <div class="group">
+                        <input type="submit" class="button" ng-click="sendNotification()" value="Send me Notification">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="group">
+                        <i>To see real magic please add this page as shortcut to your mobile home screen</i>
+                    </div>
+                </div>
+                <div ng-show="!pushNotificationSupported">
+                    <div class="group">
+                        <p>Sorry push notification not supported on your phone</p>
+                        <p>Supported browsers
+                        <p>
+                        <p>
+                            <img src="images/chrome.svg" width="55px" height="55px"
+                                 alt="Supported on Windows, Android, Mac OS X, and Linux. Not supported on iOS.">
+                            <img src="images/firefox.png" width="55px" height="55px"
+                                 alt="Supported on Mac OS X, Windows, and Linux. Coming soon to Android devices">
+                            <img src="images/safari.svg" width="55px" height="55px"
+                                 alt="Supported only on Mac OS X. Not supported on iOS">
+                        </p>
+                    </div>
+                </div>
+                <!--<div ng-show="!userPermission && pushNotificationSupported">-->
+                    <!--<div class="group">-->
+                        <!--<label class="label">Please grant permission for push notification</label>-->
+                    <!--</div>-->
+                    <!--<div class="group">-->
+                        <!--<input type="submit" class="button" ng-click="enablePushNotification()" value="Enable Notification">-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            <div class="sign-up-htm">
+                <div class="group">
+                    <div class="circular"></div>
+                    <div class="hr"></div>
+                    <p>Harshad Bankar</p>
+                    <i>Full Stack Developer</i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
