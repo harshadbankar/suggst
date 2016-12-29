@@ -1,0 +1,36 @@
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Add Name</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"> </label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <div>
+                    <div class="group">
+                        <label for="user" class="label">Name: </label>
+                        <input id="user" type="text" ng-model="messageToSend" class="input" required>
+                    </div>
+                    <div class="group">
+                        <label for="mailid" class="label">Meaning: </label>
+                        <input id="mailid" type="text" class="input" required>
+                    </div>
+                    <div class="group">
+                        <label for="exp-date" class="label">your name: </label>
+                        <input id="exp-date" type="text" class="input" required>
+                    </div>
+                    <div class="group">
+                        <label for="gender" class="label">name for : </label>
+                        <input id="gender" type="radio" class="input" required> boy
+                        <input id="gender" type="radio" class="input" > girl
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" ng-click="sendNotification()" value="Create">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="group">
+                        <i>To see real magic please add this page as shortcut to your mobile home screen</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

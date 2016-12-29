@@ -17,7 +17,16 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/notify');
 
     $stateProvider
-
+        .state('create-space', {
+            url: '/create-space',
+            templateUrl: '../templates/create-space.html',
+            controller: 'mydetailsController'
+        })
+        .state('add-name', {
+            url: '/add-name',
+            templateUrl: '../templates/add-name.html',
+            controller: 'mydetailsController'
+        })
         .state('notification', {
             url: '/notify',
             templateUrl: '../templates/notify.html',
@@ -206,5 +215,3 @@ app.controller('notificationController', function ($scope, $http, $state) {
     }
 
 });
-
-

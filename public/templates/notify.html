@@ -1,18 +1,17 @@
 <div class="login-wrap">
     <div class="login-html">
-        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Push
-        Notification</label>
-        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Credits</label>
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Suggst a Name</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"> Create your space and be surprised to see names suggested for your baby</label>
         <div class="login-form">
             <div class="sign-in-htm">
                 <div ng-show="pushNotificationSupported">
                     <div class="group">
-                        <label for="user" class="label">Message: </label>
+                        <label for="user" class="label">Space: </label>
                         <input id="user" type="text" ng-model="messageToSend" class="input" required>
                     </div>
 
                     <div class="group">
-                        <input type="submit" class="button" ng-click="sendNotification()" value="Send me Notification">
+                        <input type="submit" class="button" ng-click="sendNotification()" value="Create">
                     </div>
                     <div class="hr"></div>
                     <div class="group">
