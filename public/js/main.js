@@ -20,12 +20,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('create-space', {
             url: '/create-space',
             templateUrl: '../templates/create-space.html',
-            controller: 'mydetailsController'
+            controller: 'spaceController'
         })
         .state('add-name', {
             url: '/add-name',
             templateUrl: '../templates/add-name.html',
-            controller: 'mydetailsController'
+            controller: 'spaceController'
         })
         .state('notification', {
             url: '/notify',
@@ -35,13 +35,18 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('mydetails', {
             url: '/mydetails',
             templateUrl: '../templates/mydetails.html',
-            controller: 'mydetailsController'
+            controller: 'spaceController'
         });
 
 });
 
-app.controller('mydetailsController', function ($scope, $http, $state) {
-
+app.controller('spaceController', function ($scope, $http, $state) {
+  //Added by Nishith for Suggest
+  $scope.createSpace = function (msg) {
+      if(document.getElementById('user').value != '' || msg != '') {
+          console.log("Message to send : %s %s", $scope.user,msg); // TODO: inspect while value is null for this by model
+      }
+  };
 });
 
 app.controller('notificationController', function ($scope, $http, $state) {

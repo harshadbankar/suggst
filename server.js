@@ -26,7 +26,7 @@ var notificationCollection = db.collection('notificationCollection');
 var vapidKeyCollection = db.collection('vapidKeyCollection');
 
 //remove all rows from code
-// notificationCollection.remove() 
+// notificationCollection.remove()
 // vapidKeyCollection.remove();
 
 db.on('error', function (err) {
@@ -55,7 +55,7 @@ if (typeof ipaddress === "undefined") {
 ;
 
 http.listen(port, ipaddress, function () {
-    console.log('%s: Node server started on %s:%d ...',
+    console.log('%s: Suggst Node server started on %s:%d ...',
         Date(Date.now()), ipaddress, port);
 
     // push notification code :
@@ -269,4 +269,3 @@ app.get('/notifyapi/sendToAll', function (req, res) {
         }
     });
 });
-
